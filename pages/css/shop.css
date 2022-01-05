@@ -1,0 +1,261 @@
+*{
+    margin: 0;padding: 0;box-sizing: border-box;
+}
+body{
+    font-family: "Poppins", sans-serif;
+    background-color: #0f0f0f;
+}
+.container{
+    height: auto;
+}
+
+nav{
+    width: 100%;
+    z-index: 1;
+    padding: 0 1rem 0 1rem;
+    display: flex;
+    height: 15vh;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+nav ul li{
+   text-align: center;
+   display: inline-block;
+   list-style: none;
+}
+
+nav ul  li a{
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 1rem;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    }
+nav ul li a:hover{
+    background-color: #fff;
+    color: #0f0f0f;
+    transition:  0.3s ease;
+}
+nav ul ul {
+    position: absolute;
+    z-index: 100;
+    padding: 0.5rem;
+    display: none;
+    width: 100%;
+    background-color: #1b1b1b;
+}
+nav ul ul li a{
+    padding: 0.5rem;
+    font-size: 0.9rem;
+}
+nav ul li:hover > ul{
+    display: block;
+}
+#homeli{
+background-color: #fff;
+color: #0f0f0f;
+}
+.logo{
+    padding: 1rem;
+    width: 10% ;
+}
+#logo{
+    width: 70%;
+}
+.main{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    height: auto;
+    align-items: center;
+}
+.main h1{
+    font-size: 4rem;
+    margin: 2rem 0;
+}
+.main .card-holder{
+    display: flex;
+    margin: 2rem 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main .card-holder .card{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    grid-template-columns: 300px;
+    grid-template-rows: 210px 250px 20px;
+    grid-template-areas: "image" "text" "stats";
+    border-radius: 10px;
+    background-color: #1b1b1b;
+    /* background: rgba(0,0,0,0.8); */
+    color: white;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
+.main .card-holder .card .card-title{
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 1rem 0;
+    color: #9900FF;
+}
+.main .card-holder .card .card-image{
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+.main .card-holder .card .card-text p{
+    opacity: 0.5;
+}
+#tokenlogo{
+    width: 50%;
+}
+.join-btn{
+    margin: 1rem 0;
+    background-color: #9900FF;
+    font-family: "Poppins", sans-serif;
+    -webkit-appearance: none;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 1rem;
+    -moz-appearance: none;
+}
+.join-btn:hover{
+    color: #0f0f0f;
+    background-color: #fff;
+    transition: 0.3s ease;
+}
+
+.rgb::after {
+    content:"";
+    background: linear-gradient(45deg,
+    #ff0000 0%, 
+    #3fdad8 40%,
+    #2fc9e2 50%, 
+    #1c7fee 60%, 
+    #5f15f2 70%, 
+    #ba0cf8 80%, 
+    #fb07d9 90%, 
+    #ff0000 100%  )
+    repeat 0% 0% / 300% 100%;
+    position: absolute;
+    inset: -3px;
+    border-radius: 16px;
+    filter: blur(8px);
+    transform: translateZ(-1px); /*or z-index */
+    animation: rgb 6s linear infinite;
+}
+  
+@keyframes rgb {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+
+
+
+
+
+
+
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+.fa-bars::before{
+    content: "\f0c9";
+}
+
+
+@media all and (max-width: 900px){
+
+
+    .checkbtn{
+        display: block;
+    
+    }
+    .checkbtn{
+        padding-right: 20px;
+    }
+    #homeli{
+        background-color: rgba(0,0,0,0);
+    }
+    #drop{
+        display: none;
+        opacity: 0;
+    }
+    ul{
+        margin-top: 20px;
+        position: absolute;
+        height: 85vh;
+        z-index: 120;
+        background: #1b1b1b;
+        top: 12%;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+    .list{
+        display: block;  
+        width: 100%;     
+    }
+
+    .list li{
+        width: 100%;
+
+        height: 2rem;
+        border-radius: 5px;
+        text-align: center;
+        margin-bottom: 10px;
+        color: #fff;
+        margin-top: 20px;
+    }
+    .list li a:hover{
+        background-color: rgba(0,0,0,0);
+        transition: 0.2s ease;
+        color: #92E3A9;
+    }
+    .list li a{
+        font-size: 1rem;
+    }
+    nav ul li{
+        display: block;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+        transition: all 0.5s ease-in;
+    
+    }
+    #check:checked ~ .checkbtn i::before{
+        content: "\f00d";
+    }
+    }
